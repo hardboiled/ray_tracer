@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-void readInGlobals(char *acSrcFile)
+void readInGlobals(const char *acSrcFile)
 {
     sphere s;
     plane p;

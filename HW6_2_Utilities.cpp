@@ -3,7 +3,6 @@
 ////////////////////////////////////////
 //globals
 ////////////////////////////////////////
-//extern float g_framebuffer[ImageH][ImageW][3];
 
 color g_tAmbientLight;		// The coefficient of ambient light
 

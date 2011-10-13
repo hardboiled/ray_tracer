@@ -1,6 +1,6 @@
 -Compiling instructions
 Extract archive to a local directory then run "g++ -lSDL *.cpp -o raytracer" to compile.
-Notice that you have to have SDL installed.
+Notice that you have to have SDL installed. It may take a minute for the executable to generate the image after the window is displayed.
 
 - I/O explanation
 This file contains 6 planes, 4 spheres, and two lights.
