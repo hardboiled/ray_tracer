@@ -55,10 +55,10 @@ public:
 	float kdiff;		// The coefficient of diffuse reflection
 	float kspec;		// The coefficient of specular reflection
 	int shininess;		// The exponent to use for Specular Phong Illumination
-    virtual bool intersect(Ray const &ray, float &t){ return false; }
+    virtual bool intersect(Ray const &ray, float &t) = 0;
     vect getReflection(vect v, vect point);
     //this function assumes you already have a valid point
-    virtual vect getNormal(const vect &point){ return vect();};
+    virtual vect getNormal(const vect &point) = 0;
 };
 
 class sphere : public object
