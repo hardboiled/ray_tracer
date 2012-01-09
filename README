@@ -1,31 +1,16 @@
--Compiling instructions
-Extract archive to a local directory then run "g++ -lSDL *.cpp -o raytracer" to compile.
-Notice that you have to have SDL installed. It may take a minute for the executable to generate the image after the window is displayed.
+# Ray Tracer
+This is a ray tracer that I wrote in graphics class back in college. I'm proud of it, because it demonstrates inheritance
+and polymorphism in addition to graphical calculations, even though the code isn't as clean as I would like.
 
-- I/O explanation
-This file contains 6 planes, 4 spheres, and two lights.
-(See the input file). I read in the number of planes, spheres,
-and lights, in that order.
+## Installation
+Extract archive to a local directory then run `g++ -lSDL *.cpp -o raytracer` to compile.
+Note that you have to have `SDL` installed. A screenshot (`screen_600x600.png`) is included to show what the
+generated image should look like with the default input file.
 
-Then I read in the planes:
-infile >> p.a0 >> p.b0 >> p.c0 >> p.d0;
-        
-infile >> p.c.r >> p.c.g >> p.c.b; //base color of object
-infile >> p.kamb >> p.kdiff >> p.kspec >> p.shininess >> p.reflPerc; //these are all decimal numbers
+## Usage Notes
+This project includes two sample input files (`tester.dat` and `tester2.dat`). 
+If the program is executed without arguments, it loads `tester.dat` by default. 
+If the program is executed with an filepath as an argument, it will load the file specified.
 
-Then I read in spheres
-infile >> s.pc.x >> s.pc.y >> s.pc.z >> s.r;
-
-infile >> s.c.r >> s.c.g >> s.c.b;
-infile >> s.kamb >> s.kdiff >> s.kspec >> s.shininess >> s.reflPerc;
-
-Finally I read in lights:
-Ambient light first:
-infile >> g_tAmbientLight.r >> g_tAmbientLight.g >> g_tAmbientLight.b;
-Then the rest:
-infile >> g_patLightList[i].p.x >> g_patLightList[i].p.y >> g_patLightList[i].p.z;
-
-infile >> g_patLightList[i].brightness.r >> g_patLightList[i].brightness.g >> g_patLightList[i].brightness.b;
-
-All these inputs are put into a for loop except for the ambient lights and when reading in the number of lights.
-See fileio.cpp to see how exactly is is done.
+### Other Notes
+It may take a minute for the executable to generate the image after the window is displayed.
