@@ -10,7 +10,7 @@ generated image should look like with the default input file.
 ## Usage Notes
 This project includes two sample input files (`tester.dat` and `tester2.dat`). 
 If the program is executed without arguments, it loads `tester.dat` by default. 
-If the program is executed with an filepath as an argument, it will load the file specified.
+If the program is executed with a filepath as an argument, it will load the file specified.
 
 ### Other Notes
 It may take a minute for the executable to generate the image after the window is displayed.
